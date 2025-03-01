@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import DarkModeButton from "./DarkModeButton";
 
 const Header = () => {
   return (
@@ -21,12 +22,15 @@ const Header = () => {
           </Link>
         </li>
       </ul>
-      <Link href="/" className="flex gap-1 items-center">
-        <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">
-          IMDB
-        </span>
-        <span className="text-xl hidden sm:inline">Simple</span>
-      </Link>
+      <div className="flex gap-3 items-center">
+        <DarkModeButton />
+        <Link href="/" className="flex gap-1 items-center">
+          <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg">
+            IMDB
+          </span>
+          <span className="text-xl hidden sm:inline">Simple</span>
+        </Link>
+      </div>
     </div>
   );
 };
