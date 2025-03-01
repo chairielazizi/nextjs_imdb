@@ -1,11 +1,20 @@
 import Link from "next/link";
 import React from "react";
 import DarkModeButton from "./DarkModeButton";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Header = () => {
   return (
     <div className="flex justify-between items-center p-3 max-w-6xl mx-auto">
       <ul className="flex gap-3">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <SignedOut>
+          <Link href="/sign-in" className="hidden sm:block font-bold">
+            Sign in
+          </Link>
+        </SignedOut>
         <li>
           <Link href="/" className="hidden sm:block">
             Home
@@ -14,11 +23,6 @@ const Header = () => {
         <li>
           <Link href="/about" className="hidden sm:block">
             About
-          </Link>
-        </li>
-        <li>
-          <Link href="/sign-in" className="hidden sm:block">
-            Sign in
           </Link>
         </li>
       </ul>
