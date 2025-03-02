@@ -49,7 +49,7 @@ const userSchema = new mongoose.Schema(
     },
     profileImage: {
       type: String,
-      required: true,
+      required: false,
     },
     favourites: {
       type: [favouriteSchema],
