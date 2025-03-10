@@ -1,4 +1,4 @@
-const page = () => {
+const About = () => {
   return (
     <div>
       <header>
@@ -17,8 +17,9 @@ const page = () => {
 
         <p className="text-lg mb-4">
           Our website is built using the latest technologies, including Next.js,
-          Tailwind CSS, and MongoDB. We strive to provide a fast, secure, and
-          user-friendly experience for all our users.
+          Tailwind CSS, MongoDB and Clerk for authentication. We strive to
+          provide a fast, secure, and user-friendly experience for all our
+          users.
         </p>
 
         <h2 className="text-2xl font-bold mb-4">Our Team</h2>
@@ -96,4 +97,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;

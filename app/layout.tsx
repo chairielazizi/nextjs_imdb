@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./(components)/Header";
 import Theme from "./(components)/Theme";
+import MovieNavbar from "./(components)/MovieNavbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
         >
           <Theme>
             <Header />
+            <MovieNavbar />
             {children}
           </Theme>
         </body>
