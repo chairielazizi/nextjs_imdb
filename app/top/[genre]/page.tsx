@@ -1,9 +1,7 @@
 import Results from "@/app/(components)/Results";
 
 interface Props {
-  params: {
-    genre: string;
-  };
+  params: Promise<{ genre: string }>;
 }
 
 const TopGenres = async ({ params }: Props) => {
