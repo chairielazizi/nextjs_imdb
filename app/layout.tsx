@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "./(components)/Header";
 import Theme from "./(components)/Theme";
 import MovieNavbar from "./(components)/MovieNavbar";
+import SearchBox from "./(components)/SearchBox";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
           <Theme>
             <Header />
             <MovieNavbar />
+            <SearchBox />
             {children}
           </Theme>
         </body>
