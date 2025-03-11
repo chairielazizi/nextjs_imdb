@@ -21,6 +21,11 @@ const Header = () => {
           </Link>
         </li>
         <li>
+          <Link href="/favourites" className="hidden sm:block">
+            Favourites
+          </Link>
+        </li>
+        <li>
           <Link href="/about" className="hidden sm:block">
             About
           </Link>

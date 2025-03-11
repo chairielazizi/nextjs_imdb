@@ -46,7 +46,7 @@ export const PUT = async (req: NextRequest) => {
               title: data.title,
               image: data.image,
               description: data.overview,
-              releaseDate: data.releaseDate,
+              dateReleased: data.releaseDate,
               rating: data.voteAverage,
             },
           },

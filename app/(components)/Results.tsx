@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-type Props = {
+export type ResultProps = {
   results: {
     id: string;
     title: string;
@@ -14,7 +14,7 @@ type Props = {
   }[];
 };
 
-const Results = ({ results }: Props) => {
+const Results = ({ results }: ResultProps) => {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 max-w-6xl mx-auto py-4">
       {results.map((result) => (
