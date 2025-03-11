@@ -33,14 +33,21 @@ const AddToFavButton = ({
       // setIsFav(favs.includes(movieId));
       if (user.publicMetadata && user.publicMetadata.favourites) {
         setIsFav(
-          (user.publicMetadata?.favourites as string[]).includes(movieId)
+          (user.publicMetadata?.favourites as string[]).includes(
+            movieId.toString()
+          )
         );
+
+        // console.log(user.publicMetadata.favourites);
+        // console.log("MovieId", movieId);
       }
+      // console.log("isFav set ke tak", isFav);
       setIsLoading(false);
     } else {
       setIsLoading(false);
     }
-  }, [isLoaded, isSignedIn, user, movieId]);
+  }, [movieId, isLoaded, isSignedIn, user]);
+  console.log("isFav set ke tak", isFav);
 
   const handleFavouriteClick = async () => {
     setIsLoading(true);
@@ -66,6 +73,7 @@ const AddToFavButton = ({
       });
 
       if (response.ok) {
+        // await user.reload();
         setIsFav(!isFav);
       } else {
         console.error("Failed to add to favourites");
@@ -82,9 +90,9 @@ const AddToFavButton = ({
       <button
         disabled={isLoading}
         onClick={handleFavouriteClick}
-        className={`hover:text-amber-500 mt-5 p-2 rounded-lg cursor-pointer ${
+        className={`hover:text-amber-500 hover:bg-slate-700 mt-5 p-2 rounded-lg cursor-pointer ${
           isFav ? "bg-red-400" : "bg-slate-100 "
-        }  hover:bg-slate-700`}
+        }`}
       >
         {isLoading
           ? "Loading..."

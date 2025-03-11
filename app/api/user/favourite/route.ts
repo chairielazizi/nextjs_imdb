@@ -3,7 +3,7 @@ import connectDB from "@/lib/db";
 import { clerkClient, currentUser } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 
-interface Favourite {
+export interface Favourite {
   movieId: string;
 }
 
@@ -19,9 +19,12 @@ export const PUT = async (req: NextRequest) => {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
 
     const existingUser = await User.findById(user.publicMetadata.userMongoId);
+    console.log("existingUser", existingUser);
+    console.log("data", data);
     if (
       existingUser?.favourites?.some(
-        (fav: Favourite) => fav.movieId === data.movieId
+        (fav: Favourite) => fav.movieId == data.movieId
+        // (fav: string) => fav == data.movieId
       )
     ) {
       const updatedUser = await User.findByIdAndUpdate(
