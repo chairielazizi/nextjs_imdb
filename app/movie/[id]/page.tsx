@@ -1,3 +1,4 @@
+import AddToFavButton from "@/app/(components)/AddToFavButton";
 import Link from "next/link";
 import React from "react";
 
@@ -51,7 +52,14 @@ const MoviePage = async ({ params }: Props) => {
             {movie.runtime} minutes
           </p>
           {/* add to fav component */}
-          <p>AddToFav</p>
+          <AddToFavButton
+            movieId={movie.id}
+            title={movie.title || movie.name}
+            image={movie.backdrop_path || movie.poster_path}
+            overview={movie.overview}
+            releaseDate={movie.release_date || movie.first_air_date}
+            voteAverage={movie.vote_average}
+          />
         </div>
       </div>
     </div>
