@@ -1,4 +1,4 @@
-# Ticketing System
+# IMDB Clone
 
 An IMDB like website built using Next.js, Tailwind CSS, MongoDB and Clerk for authentication.
 
