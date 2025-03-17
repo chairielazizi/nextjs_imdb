@@ -1,3 +1,23 @@
+# Ticketing System
+
+An IMDB like website built using Next.js, Tailwind CSS, MongoDB and Clerk for authentication.
+
+## Hosted Website link:
+
+https://nextjs-imdb-rosy.vercel.app/
+
+### Screenshots
+
+| ![screenshot](https://raw.githubusercontent.com/chairielazizi/nextjs_imdb/master/screenshots/home.png) Home | ![screenshot](https://raw.githubusercontent.com/chairielazizi/nextjs_imdb/master/screenshots/login.png) Sign In/Sign Up |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+
+| ![screenshot](https://raw.githubusercontent.com/chairielazizi/nextjs_imdb/master/screenshots/search.png) Search result | ![screenshot](https://raw.githubusercontent.com/chairielazizi/nextjs_imdb/master/screenshots/detail.png) Detail movie page |
+| ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+
+<br/>
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

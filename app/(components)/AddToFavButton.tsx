@@ -47,7 +47,7 @@ const AddToFavButton = ({
       setIsLoading(false);
     }
   }, [movieId, isLoaded, isSignedIn, user]);
-  console.log("isFav set ke tak", isFav);
+  // console.log("isFav set ke tak", isFav);
 
   const handleFavouriteClick = async () => {
     setIsLoading(true);
